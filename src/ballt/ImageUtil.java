@@ -1,3 +1,10 @@
+/*
+ * Course: CSC-1120
+ * Personal Project 1 - Hashmaps
+ * ballt.Hashmap
+ * Name: Tavion Ball
+ * Last Updated: 03/03/2026
+ */
 package ballt;
 
 import java.awt.image.BufferedImage;

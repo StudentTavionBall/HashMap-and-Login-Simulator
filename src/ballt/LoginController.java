@@ -1,3 +1,10 @@
+/*
+ * Course: CSC-1120
+ * Personal Project 1 - Hashmaps
+ * ballt.Hashmap
+ * Name: Tavion Ball
+ * Last Updated: 03/03/2026
+ */
 package ballt;
 
 import javafx.fxml.FXML;
@@ -6,7 +13,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * class to control the login screen
+ */
 public class LoginController {
+
     @FXML
     private PasswordField password;
     @FXML
@@ -28,7 +39,6 @@ public class LoginController {
     @FXML
     private void login() {
         try {
-            loginInfo.put(username.getText(), password.getText());
             String key = username.getText();
             String value = password.getText();
             if (loginInfo.get(key) != null && loginInfo.get(key).equals(value)) {
@@ -37,6 +47,15 @@ public class LoginController {
             } else {
                 incorrect.setText("Incorrect username or password please try again");
             }
+        } catch (Exception e) {
+            System.out.println("Whoops");
+        }
+    }
+
+    @FXML
+    private void register() {
+        try {
+            loginInfo.put(username.getText(), password.getText());
         } catch (Exception e) {
             System.out.println("Whoops");
         }
